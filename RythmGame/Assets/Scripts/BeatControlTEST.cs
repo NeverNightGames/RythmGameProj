@@ -79,6 +79,8 @@ public class BeatControlTEST : MonoBehaviour {
 			aSource.Play ();
 
 			B2 = true;
+
+            B1 = false;
 		}
 		else
 		{
@@ -94,6 +96,8 @@ public class BeatControlTEST : MonoBehaviour {
 			aSource.Play ();
 
 			B3 = true;
+
+            B2 = false;
 		}
 		else
 		{
@@ -109,7 +113,10 @@ public class BeatControlTEST : MonoBehaviour {
 			aSource.Play ();
 
 			B4 = true;
+
+            B3 = false;
 		}
+
 		else
 		{
 			//B4 = false;

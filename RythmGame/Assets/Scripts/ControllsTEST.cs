@@ -2,365 +2,383 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class ControllsTEST : MonoBehaviour {
+public class ControllsTEST : MonoBehaviour
+{
 
-	public GameObject smallOBJ;
+    public GameObject smallOBJ;
 
-	public GameObject bigOBJ;
-	
-	public GameObject rangeOBJ;
+    public GameObject bigOBJ;
 
+    public GameObject rangeOBJ;
 
-	private GameObject Lane1OBJ;
 
-	private GameObject Lane1Highlight;
+    private GameObject Lane1OBJ;
 
-	private GameObject Lane2OBJ;
+    private GameObject Lane1Highlight;
 
-	private GameObject Lane2Highlight;
+    private GameObject Lane2OBJ;
 
-	private GameObject Lane3OBJ;
+    private GameObject Lane2Highlight;
 
-	private GameObject Lane3Highlight;
+    private GameObject Lane3OBJ;
 
+    private GameObject Lane3Highlight;
 
 
 
-	public bool l1Selected = true;
 
-	public bool l2Selected = false;
+    public bool l1Selected = false;
 
-	public bool l3Selected = false;
+    public bool l2Selected = true;
 
+    public bool l3Selected = false;
 
-	public Image blueButton1;
 
-	public Image blueButton2;
+    public Image blueButton1;
 
-	public Image blueButton3;
+    public Image blueButton2;
 
+    public Image blueButton3;
 
-	public Image greenButton1;
-	
-	public Image greenButton2;
 
-	public Image greenButton3;
+    public Image greenButton1;
 
+    public Image greenButton2;
 
+    public Image greenButton3;
 
-//	public AudioClip A1;
-//
-//	public AudioClip A2;
-//
-//
-//	private AudioSource aSource1;
-//
-//	private AudioSource aSource2;
-//
-//	private AudioSource aSource3;
 
 
-	private bool hasPlayed = false;
+    //	public AudioClip A1;
+    //
+    //	public AudioClip A2;
+    //
+    //
+    //	private AudioSource aSource1;
+    //
+    //	private AudioSource aSource2;
+    //
+    //	private AudioSource aSource3;
 
 
-//	public int beatCounntA;
-//
-//	public int beatCounntS;
-//
-//	public int beatCounntD;
+    private bool hasPlayed = false;
 
-	public float beatCount;
 
+    //	public int beatCounntA;
+    //
+    //	public int beatCounntS;
+    //
+    //	public int beatCounntD;
 
-	// Use this for initialization
-	void Start ()
-	{
-		Lane1OBJ = GameObject.Find ("Lane 1");
+    public float beatCount;
 
-		Lane2OBJ = GameObject.Find ("Lane 2");
 
-		Lane3OBJ = GameObject.Find ("Lane 3");
+    // Use this for initialization
+    void Start()
+    {
+        Lane1OBJ = GameObject.Find("Lane 1");
 
+        Lane2OBJ = GameObject.Find("Lane 2");
 
-		Lane1Highlight = GameObject.Find ("Lane 1 Highlight");
+        Lane3OBJ = GameObject.Find("Lane 3");
 
-		Lane1Highlight.SetActive (false);
 
-		Lane2Highlight = GameObject.Find ("Lane 2 Highlight");
-		
-		Lane2Highlight.SetActive (false);
+        Lane1Highlight = GameObject.Find("Lane 1 Highlight");
 
-		Lane3Highlight = GameObject.Find ("Lane 3 Highlight");
-		
-		Lane3Highlight.SetActive (false);
+        Lane1Highlight.SetActive(false);
 
+        Lane2Highlight = GameObject.Find("Lane 2 Highlight");
 
+       // Lane2Highlight.SetActive(false);
 
-//		aSource1 = GetComponent<AudioSource>();
-//
-//		aSource2 = gec
-//
-//		aSource3 = GetComponent<AudioSource>();
+        Lane3Highlight = GameObject.Find("Lane 3 Highlight");
 
+        Lane3Highlight.SetActive(false);
 
 
-	
-	
-	}
 
+        //		aSource1 = GetComponent<AudioSource>();
+        //
+        //		aSource2 = gec
+        //
+        //		aSource3 = GetComponent<AudioSource>();
 
-	
-	// Update is called once per frame
-	void Update () 
-	{
 
-//		Vector2 lane1POS = new Vector2(Lane1OBJ.transform.position.x,Lane1OBJ.transform.position.y - 5);
-//
-//		Vector2 lane2POS = new Vector2(Lane2OBJ.transform.position.x,Lane2OBJ.transform.position.y - 5);
-//
-//		Vector2 lane3POS = new Vector2(Lane3OBJ.transform.position.x,Lane3OBJ.transform.position.y - 5);
 
-		OneTwoThree ();
 
-		ASD ();
 
-		QWE ();
+    }
 
-	}
 
-	void OneTwoThree()
-	{
 
-		if(Input.GetKeyDown (KeyCode.Alpha1))
-		{
-			//print("1");
+    // Update is called once per frame
+    void Update()
+    {
 
-			l1Selected = true;
+        //		Vector2 lane1POS = new Vector2(Lane1OBJ.transform.position.x,Lane1OBJ.transform.position.y - 5);
+        //
+        //		Vector2 lane2POS = new Vector2(Lane2OBJ.transform.position.x,Lane2OBJ.transform.position.y - 5);
+        //
+        //		Vector2 lane3POS = new Vector2(Lane3OBJ.transform.position.x,Lane3OBJ.transform.position.y - 5);
 
-			Lane1Highlight.SetActive (true);
-			
-			l2Selected = false;
+        OneTwoThree();
 
-			Lane2Highlight.SetActive (false);
-			
-			l3Selected = false;
+        ASD();
 
-			Lane3Highlight.SetActive (false);
+        QWE();
 
-		}
+    }
 
-		if(Input.GetKeyDown (KeyCode.Alpha2))
-		{
-			//print("2");
+    void OneTwoThree()
+    {
 
-			l2Selected = true;
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            //print("1");
 
-			Lane2Highlight.SetActive (true);
+            l1Selected = true;
 
-			l1Selected = false;
+            Lane1Highlight.SetActive(true);
 
-			Lane1Highlight.SetActive (false);
-			
-			l3Selected = false;
+            l2Selected = false;
 
-			Lane3Highlight.SetActive (false);
-		}
+            Lane2Highlight.SetActive(false);
 
+            l3Selected = false;
 
-		if(Input.GetKeyDown (KeyCode.Alpha3))
-		{
-			//print("3");
+            Lane3Highlight.SetActive(false);
 
-			l3Selected = true;
+        }
 
-			Lane3Highlight.SetActive (true);
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            //print("2");
 
-			l1Selected = false;
+            l2Selected = true;
 
-			Lane1Highlight.SetActive (false);
-			
-			l2Selected = false;
+            Lane2Highlight.SetActive(true);
 
-			Lane2Highlight.SetActive (false);
-		}
+            l1Selected = false;
 
+            Lane1Highlight.SetActive(false);
 
+            l3Selected = false;
 
-	}
+            Lane3Highlight.SetActive(false);
+        }
 
-	void ASD()
-	{
-		if(Input.GetKey (KeyCode.A))
-		{
-			//Debug.Log("A");
 
-			blueButton1.rectTransform.localScale = new Vector3(2.5f,1.5f,1);
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            //print("3");
 
-			if(GameObject.Find ("Beat Control").GetComponentInParent<BeatControlTEST>().B1 == true);
-			{
-				Debug.Log("B1");
-			}
+            l3Selected = true;
 
-			//blueButton1.preferredHeight = 150;
+            Lane3Highlight.SetActive(true);
 
-			//beatCount++;
-		}
-		else
-		{
-			blueButton1.rectTransform.localScale = new Vector3(1,1,1);
-		}
-		
-		if(Input.GetKey (KeyCode.S))
-		{
-			//Debug.Log("S");
+            l1Selected = false;
 
-			blueButton2.rectTransform.localScale = new Vector3(2.5f,1.5f,1);
+            Lane1Highlight.SetActive(false);
 
-			if(GameObject.Find ("Beat Control").GetComponentInParent<BeatControlTEST>().B2 == true);
-			{
-				Debug.Log("B2");
-			}
+            l2Selected = false;
 
+            Lane2Highlight.SetActive(false);
+        }
 
-			//beatCount++;
-		}
-		else
-		{
-			blueButton2.rectTransform.localScale = new Vector3(1,1,1);
-		}
-		
-		if(Input.GetKey (KeyCode.D))
-		{
-			//Debug.Log("D");
 
-			blueButton3.rectTransform.localScale = new Vector3(2.5f,1.5f,1);
 
-			//beatCount++;
-		}
-		else
-		{
-			blueButton3.rectTransform.localScale = new Vector3(1,1,1);
-		}
-	}
+    }
 
-	void QWE()
-	{
+    void ASD()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            //Debug.Log("A");
 
-		Vector2 lane1POS = new Vector2(Lane1OBJ.transform.position.x,Lane1OBJ.transform.position.y - 5);
-		
-		Vector2 lane2POS = new Vector2(Lane2OBJ.transform.position.x,Lane2OBJ.transform.position.y - 5);
-		
-		Vector2 lane3POS = new Vector2(Lane3OBJ.transform.position.x,Lane3OBJ.transform.position.y - 5);
+            blueButton1.rectTransform.localScale = new Vector3(2.5f, 1.5f, 1);
 
+            if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().B1 == true)
+            {
+                Debug.Log("B1");
+            }
 
-//		if(beatCount >= 3)
-//		{
+            //blueButton1.preferredHeight = 150;
 
-		 if(Input.GetKey (KeyCode.Q))
-		 {
-			//Debug.Log("Q");
+            //beatCount++;
+        }
+        else
+        {
+            blueButton1.rectTransform.localScale = new Vector3(1, 1, 1);
+        }
 
-				greenButton1.rectTransform.localScale = new Vector3(2.5f,1.5f,1);
-			
-				if(l1Selected == true)
-				{
-			     // Instantiate (smallOBJ,lane1POS,Quaternion.identity);
-				}
+        if (Input.GetKey(KeyCode.S))
+        {
+            //Debug.Log("S");
 
-				if(l2Selected == true)
-				{
-					//Instantiate (smallOBJ,lane2POS,Quaternion.identity);
+            blueButton2.rectTransform.localScale = new Vector3(2.5f, 1.5f, 1);
 
-				}
+            if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().B2 == true)
+            {
+                Debug.Log("B2");
+            }
 
-				if(l3Selected == true)
-				{
-					//Instantiate (smallOBJ,lane3POS,Quaternion.identity);
 
-				}
+            //beatCount++;
+        }
+        else
+        {
+            blueButton2.rectTransform.localScale = new Vector3(1, 1, 1);
+        }
 
-				//beatCount = 0;
-			
-		 }
-		else
-		{
-			greenButton1.rectTransform.localScale = new Vector3(1,1,1);
-		}
+        if (Input.GetKey(KeyCode.D))
+        {
+            //Debug.Log("D");
 
-		
-		 if(Input.GetKey (KeyCode.W))
-		 {
-			//Debug.Log("W");
+            blueButton3.rectTransform.localScale = new Vector3(2.5f, 1.5f, 1);
 
-			greenButton2.rectTransform.localScale = new Vector3(2.5f,1.5f,1);
+            if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().B3 == true)
+            {
+                Debug.Log("B3");
+            }
 
-				if(l1Selected == true)
-				{
-					//Instantiate (bigOBJ,lane1POS,Quaternion.identity);
-				}
-				
-				if(l2Selected == true)
-				{
-					//Instantiate (bigOBJ,lane2POS,Quaternion.identity);
-					
-				}
-				
-				if(l3Selected == true)
-				{
-					//Instantiate (bigOBJ,lane3POS,Quaternion.identity);
-					
-				}
-			
+            //beatCount++;
+        }
+        else
+        {
+            blueButton3.rectTransform.localScale = new Vector3(1, 1, 1);
+        }
+    }
 
-				//beatCount = 0;
+    void QWE()
+    {
 
-		 }
-		else
-		{
-			greenButton2.rectTransform.localScale = new Vector3(1,1,1);
-		}
-		
-		 if(Input.GetKey (KeyCode.E))
-		 {
+        Vector2 lane1POS = new Vector2(Lane1OBJ.transform.position.x, Lane1OBJ.transform.position.y - 5);
 
-			greenButton3.rectTransform.localScale = new Vector3(2.5f,1.5f,1);
+        Vector2 lane2POS = new Vector2(Lane2OBJ.transform.position.x, Lane2OBJ.transform.position.y - 5);
 
-			//Debug.Log("E");
+        Vector2 lane3POS = new Vector2(Lane3OBJ.transform.position.x, Lane3OBJ.transform.position.y - 5);
 
-				if(l1Selected == true)
-				{
-					//Instantiate (rangeOBJ,lane1POS,Quaternion.identity);
-				}
-				
-				if(l2Selected == true)
-				{
-					//Instantiate (rangeOBJ,lane2POS,Quaternion.identity);
-					
-				}
-				
-				if(l3Selected == true)
-				{
-					//Instantiate (rangeOBJ,lane3POS,Quaternion.identity);
-					
-				}
 
+        //		if(beatCount >= 3)
+        //		{
 
-				//beatCount = 0;
+        if (Input.GetKey(KeyCode.Q))
+        {
+            //Debug.Log("Q");
 
+            greenButton1.rectTransform.localScale = new Vector3(2.5f, 1.5f, 1);
 
-		 }
-		else
-		{
-			greenButton3.rectTransform.localScale = new Vector3(1,1,1);
-		}
+            if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().B4 == true)
+            {
 
+                if (l1Selected == true)
+                {
+                    Instantiate(smallOBJ, lane1POS, Quaternion.identity);
+                }
 
+                //if (l2Selected == true)
+                //{
+                //    Instantiate(smallOBJ, lane2POS, Quaternion.identity);
 
-		}
+                //}
 
-	}
+                //if (l3Selected == true)
+                //{
+                //    Instantiate(smallOBJ, lane3POS, Quaternion.identity);
 
 
-	
+                //}
+            }
+
+            //beatCount = 0;
+
+        }
+        else
+        {
+            greenButton1.rectTransform.localScale = new Vector3(1, 1, 1);
+        }
+
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            //Debug.Log("W");
+
+            greenButton2.rectTransform.localScale = new Vector3(2.5f, 1.5f, 1);
+
+            if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().B4 == true)
+            {
+
+                //if (l1Selected == true)
+                //{
+                //   Instantiate (bigOBJ,lane1POS,Quaternion.identity);
+                //}
+
+                //if (l2Selected == true)
+                //{
+                //    Instantiate (bigOBJ,lane2POS,Quaternion.identity);
+
+                //}
+
+                //if (l3Selected == true)
+                //{
+                //    Instantiate (bigOBJ,lane3POS,Quaternion.identity);
+
+                //}
+            }
+
+            //beatCount = 0;
+
+        }
+        else
+        {
+            greenButton2.rectTransform.localScale = new Vector3(1, 1, 1);
+        }
+
+        if (Input.GetKey(KeyCode.E))
+        {
+
+            greenButton3.rectTransform.localScale = new Vector3(2.5f, 1.5f, 1);
+
+            //Debug.Log("E");
+
+            if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().B4 == true)
+            {
+
+                //if (l1Selected == true)
+                //{
+                //    Instantiate(rangeOBJ, lane1POS, Quaternion.identity);
+                //}
+
+                //if (l2Selected == true)
+                //{
+                //    Instantiate(rangeOBJ, lane2POS, Quaternion.identity);
+
+                //}
+
+                //if (l3Selected == true)
+                //{
+                //    Instantiate(rangeOBJ, lane3POS, Quaternion.identity);
+
+                //}
+            }
+
+
+            //beatCount = 0;
+
+
+        }
+        else
+        {
+            greenButton3.rectTransform.localScale = new Vector3(1, 1, 1);
+        }
+
+
+
+    }
+
+}
+
+
+
 
 //}

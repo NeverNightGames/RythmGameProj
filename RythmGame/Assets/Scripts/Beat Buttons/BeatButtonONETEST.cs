@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class BeatButtonONETEST : MonoBehaviour {
@@ -8,6 +9,8 @@ public class BeatButtonONETEST : MonoBehaviour {
 	public GameObject BeatDiamond2;
 
 	public GameObject BeatDiamond3;
+
+    
 
 	// Use this for initialization
 	void Start () 
