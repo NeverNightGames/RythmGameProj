@@ -13,9 +13,17 @@ public class ControllsTEST : MonoBehaviour {
 
 	private GameObject Lane1OBJ;
 
+	private GameObject Lane1Highlight;
+
 	private GameObject Lane2OBJ;
 
+	private GameObject Lane2Highlight;
+
 	private GameObject Lane3OBJ;
+
+	private GameObject Lane3Highlight;
+
+
 
 
 	public bool l1Selected = true;
@@ -74,6 +82,20 @@ public class ControllsTEST : MonoBehaviour {
 		Lane3OBJ = GameObject.Find ("Lane 3");
 
 
+		Lane1Highlight = GameObject.Find ("Lane 1 Highlight");
+
+		Lane1Highlight.SetActive (false);
+
+		Lane2Highlight = GameObject.Find ("Lane 2 Highlight");
+		
+		Lane2Highlight.SetActive (false);
+
+		Lane3Highlight = GameObject.Find ("Lane 3 Highlight");
+		
+		Lane3Highlight.SetActive (false);
+
+
+
 //		aSource1 = GetComponent<AudioSource>();
 //
 //		aSource2 = gec
@@ -114,10 +136,16 @@ public class ControllsTEST : MonoBehaviour {
 			//print("1");
 
 			l1Selected = true;
+
+			Lane1Highlight.SetActive (true);
 			
 			l2Selected = false;
+
+			Lane2Highlight.SetActive (false);
 			
 			l3Selected = false;
+
+			Lane3Highlight.SetActive (false);
 
 		}
 
@@ -127,9 +155,15 @@ public class ControllsTEST : MonoBehaviour {
 
 			l2Selected = true;
 
+			Lane2Highlight.SetActive (true);
+
 			l1Selected = false;
+
+			Lane1Highlight.SetActive (false);
 			
 			l3Selected = false;
+
+			Lane3Highlight.SetActive (false);
 		}
 
 
@@ -139,9 +173,15 @@ public class ControllsTEST : MonoBehaviour {
 
 			l3Selected = true;
 
+			Lane3Highlight.SetActive (true);
+
 			l1Selected = false;
+
+			Lane1Highlight.SetActive (false);
 			
 			l2Selected = false;
+
+			Lane2Highlight.SetActive (false);
 		}
 
 
