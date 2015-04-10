@@ -5,6 +5,10 @@ public class BeatControlTEST : MonoBehaviour {
 
 	public float i = 0;
 
+    public float moveBeatDia = -10;
+
+    public float moveTime;
+
 
 	private AudioSource aSource;
 
@@ -38,6 +42,15 @@ public class BeatControlTEST : MonoBehaviour {
 	public bool B4;
 
 
+    public bool moveD1;
+
+    public bool moveD2;
+
+    public bool moveD3;
+
+    public bool moveD4;
+
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -45,7 +58,10 @@ public class BeatControlTEST : MonoBehaviour {
 
 		//aSource.clip = A1;
 
+        //moveD1 = true;
 
+       
+      
 
 	}
 	
@@ -53,11 +69,25 @@ public class BeatControlTEST : MonoBehaviour {
 	void Update () 
 	{
 
-
-
 		i++;
 
-		if(i ==  Beat1) 
+        moveBeatDia++;
+
+        float M1 = -9;
+
+        float M2 = 30;
+
+        float M3 = 70;
+
+
+
+        if (moveBeatDia == M1)
+        {
+            moveD1 = true;
+        }
+       
+
+		if(i == Beat1) 
 		{
 			aSource.clip = A1;
 
@@ -70,6 +100,14 @@ public class BeatControlTEST : MonoBehaviour {
 		{
 			//B1 = false;
 		}
+
+        if (moveBeatDia == M2)
+        {
+            moveD2 = true;
+
+            moveD1 = false;
+        }
+      
 
 
 		if(i ==  Beat2) 
@@ -87,7 +125,13 @@ public class BeatControlTEST : MonoBehaviour {
 			//B2 = false;
 		}
 
+        if (moveBeatDia == M3)
+        {
+            moveD3 = true;
 
+            moveD2 = false;
+        }
+      
 		
 		if(i ==  Beat3) 
 		{
@@ -115,12 +159,21 @@ public class BeatControlTEST : MonoBehaviour {
 			B4 = true;
 
             B3 = false;
+
+           
+           
 		}
 
-		else
-		{
-			//B4 = false;
-		}
+        if (moveBeatDia == 140)
+        {
+            moveD3 = false;
+
+            moveD1 = true;
+
+            moveBeatDia = -10;
+
+        }
+
 
 
 		if(i == Reset) 
@@ -134,6 +187,12 @@ public class BeatControlTEST : MonoBehaviour {
 			B3 = false;
 
 			B4 = false;
+
+           
+
+           
+
+
 		}
 
 

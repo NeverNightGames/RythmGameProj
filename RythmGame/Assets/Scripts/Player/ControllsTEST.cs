@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class ControllsTEST : MonoBehaviour
 {
@@ -48,6 +48,9 @@ public class ControllsTEST : MonoBehaviour
     public Image greenButton3;
 
 
+    public bool isCreated = false;
+
+
 
     //	public AudioClip A1;
     //
@@ -89,7 +92,7 @@ public class ControllsTEST : MonoBehaviour
 
         Lane2Highlight = GameObject.Find("Lane 2 Highlight");
 
-       // Lane2Highlight.SetActive(false);
+        // Lane2Highlight.SetActive(false);
 
         Lane3Highlight = GameObject.Find("Lane 3 Highlight");
 
@@ -252,11 +255,11 @@ public class ControllsTEST : MonoBehaviour
     void QWE()
     {
 
-        Vector2 lane1POS = new Vector2(Lane1OBJ.transform.position.x, Lane1OBJ.transform.position.y - 5);
+        Vector2 lane1POS = new Vector2(Lane1OBJ.transform.position.x, Lane1OBJ.transform.position.y - 10);
 
-        Vector2 lane2POS = new Vector2(Lane2OBJ.transform.position.x, Lane2OBJ.transform.position.y - 5);
+        Vector2 lane2POS = new Vector2(Lane2OBJ.transform.position.x, Lane2OBJ.transform.position.y - 10);
 
-        Vector2 lane3POS = new Vector2(Lane3OBJ.transform.position.x, Lane3OBJ.transform.position.y - 5);
+        Vector2 lane3POS = new Vector2(Lane3OBJ.transform.position.x, Lane3OBJ.transform.position.y - 10);
 
 
         //		if(beatCount >= 3)
@@ -268,27 +271,35 @@ public class ControllsTEST : MonoBehaviour
 
             greenButton1.rectTransform.localScale = new Vector3(2.5f, 1.5f, 1);
 
+            //if (!isCreated)
+            //{
+
             if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().B4 == true)
             {
-
-                if (l1Selected == true)
+                if (!isCreated)
                 {
-                    Instantiate(smallOBJ, lane1POS, Quaternion.identity);
+
+                    if (l1Selected == true)
+                    {
+                        Instantiate(smallOBJ, lane1POS, Quaternion.identity);
+                    }
+
+                    if (l2Selected == true)
+                    {
+                        Instantiate(smallOBJ, lane2POS, Quaternion.identity);
+
+                    }
+
+                    if (l3Selected == true)
+                    {
+                        Instantiate(smallOBJ, lane3POS, Quaternion.identity);
+                    }
+
+                    isCreated = true;
                 }
-
-                //if (l2Selected == true)
-                //{
-                //    Instantiate(smallOBJ, lane2POS, Quaternion.identity);
-
-                //}
-
-                //if (l3Selected == true)
-                //{
-                //    Instantiate(smallOBJ, lane3POS, Quaternion.identity);
-
-
-                //}
             }
+
+
 
             //beatCount = 0;
 
@@ -296,6 +307,8 @@ public class ControllsTEST : MonoBehaviour
         else
         {
             greenButton1.rectTransform.localScale = new Vector3(1, 1, 1);
+
+            //isCreated = false;
         }
 
 
@@ -305,25 +318,33 @@ public class ControllsTEST : MonoBehaviour
 
             greenButton2.rectTransform.localScale = new Vector3(2.5f, 1.5f, 1);
 
+            //if (!isCreated)
+            //{
+
             if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().B4 == true)
             {
+                if (!isCreated)
+                {
 
-                //if (l1Selected == true)
-                //{
-                //   Instantiate (bigOBJ,lane1POS,Quaternion.identity);
-                //}
+                    if (l1Selected == true)
+                    {
+                        Instantiate(bigOBJ, lane1POS, Quaternion.identity);
+                    }
 
-                //if (l2Selected == true)
-                //{
-                //    Instantiate (bigOBJ,lane2POS,Quaternion.identity);
+                    if (l2Selected == true)
+                    {
+                        Instantiate(bigOBJ, lane2POS, Quaternion.identity);
 
-                //}
+                    }
 
-                //if (l3Selected == true)
-                //{
-                //    Instantiate (bigOBJ,lane3POS,Quaternion.identity);
+                    if (l3Selected == true)
+                    {
+                        Instantiate(bigOBJ, lane3POS, Quaternion.identity);
 
-                //}
+                    }
+
+                    isCreated = true;
+                }
             }
 
             //beatCount = 0;
@@ -337,29 +358,43 @@ public class ControllsTEST : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
 
+
+
             greenButton3.rectTransform.localScale = new Vector3(2.5f, 1.5f, 1);
 
             //Debug.Log("E");
 
+
+
             if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().B4 == true)
             {
+                if (!isCreated)
+                {
 
-                //if (l1Selected == true)
-                //{
-                //    Instantiate(rangeOBJ, lane1POS, Quaternion.identity);
-                //}
+                    if (l1Selected == true)
+                    {
+                        Instantiate(rangeOBJ, lane1POS, Quaternion.identity);
+                    }
 
-                //if (l2Selected == true)
-                //{
-                //    Instantiate(rangeOBJ, lane2POS, Quaternion.identity);
+                    if (l2Selected == true)
+                    {
+                        Instantiate(rangeOBJ, lane2POS, Quaternion.identity);
 
-                //}
+                    }
 
-                //if (l3Selected == true)
-                //{
-                //    Instantiate(rangeOBJ, lane3POS, Quaternion.identity);
+                    if (l3Selected == true)
+                    {
+                        Instantiate(rangeOBJ, lane3POS, Quaternion.identity);
 
-                //}
+                    }
+
+                    isCreated = true;
+
+
+                }
+
+
+
             }
 
 
@@ -372,7 +407,12 @@ public class ControllsTEST : MonoBehaviour
             greenButton3.rectTransform.localScale = new Vector3(1, 1, 1);
         }
 
+        if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().B4 == false)
+        {
+            isCreated = false;
+        }
 
+        //isCreated = false;
 
     }
 
