@@ -55,6 +55,7 @@ public class PlayerBeatTEST : MonoBehaviour
 
         BDStartpos3 = BeatDia3.transform.position;
 
+
         //BeatDia1.SetActive(false);
 
         //BeatDia2.SetActive(false);
@@ -76,21 +77,21 @@ public class PlayerBeatTEST : MonoBehaviour
 
         if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().moveD1 == true)
         {
-            BeatDia1.transform.position = Vector2.Lerp(BeatDia1.transform.position, beatButton1.transform.position, 10 * Time.deltaTime);
+            BeatDia1.transform.position = Vector2.Lerp(BeatDia1.transform.position, beatButton1.transform.position, 15 * Time.deltaTime);
 
             BeatDia1.SetActive(true);
         }
 
         if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().moveD2 == true)
         {
-            BeatDia2.transform.position = Vector2.Lerp(BeatDia2.transform.position, beatButton2.transform.position, 10 * Time.deltaTime);
+            BeatDia2.transform.position = Vector2.Lerp(BeatDia2.transform.position, beatButton2.transform.position, 15 * Time.deltaTime);
 
             BeatDia2.SetActive(true);
         }
 
         if (GameObject.Find("Beat Control").GetComponentInParent<BeatControlTEST>().moveD3 == true)
         {
-            BeatDia3.transform.position = Vector2.Lerp(BeatDia3.transform.position, beatButton3.transform.position, 10 * Time.deltaTime);
+            BeatDia3.transform.position = Vector2.Lerp(BeatDia3.transform.position, beatButton3.transform.position, 15 * Time.deltaTime);
 
             BeatDia3.SetActive(true);
 

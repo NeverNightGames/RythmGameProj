@@ -81,7 +81,12 @@ public class BeatControlTEST : MonoBehaviour {
 
 
 
-        if (moveBeatDia == M1)
+        //if (moveBeatDia == M1)
+        //{
+        //    moveD1 = true;
+        //}
+
+        if (i == Beat1 - 10)
         {
             moveD1 = true;
         }
@@ -101,9 +106,11 @@ public class BeatControlTEST : MonoBehaviour {
 			//B1 = false;
 		}
 
-        if (moveBeatDia == M2)
+        if (i == Beat2 - 10)
         {
             moveD2 = true;
+
+            moveD1 = false;
 
             moveD1 = false;
         }
@@ -125,11 +132,13 @@ public class BeatControlTEST : MonoBehaviour {
 			//B2 = false;
 		}
 
-        if (moveBeatDia == M3)
+        if (i == Beat3 - 10)
         {
             moveD3 = true;
 
             moveD2 = false;
+
+            moveD1 = false;
         }
       
 		
