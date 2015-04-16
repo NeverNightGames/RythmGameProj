@@ -25,8 +25,6 @@ public class ControllsTEST : MonoBehaviour
     private GameObject Lane3Highlight;
 
 
-
-
     public bool l1Selected = false;
 
     public bool l2Selected = true;
