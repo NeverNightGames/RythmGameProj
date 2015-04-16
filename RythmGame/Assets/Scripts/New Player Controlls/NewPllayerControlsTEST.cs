@@ -89,7 +89,7 @@ public class NewPllayerControlsTEST : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
 
         OneTwoThree();
 
@@ -170,13 +170,13 @@ public class NewPllayerControlsTEST : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Q))
         {
-            print("Q");
+            //print("Q");
 
             greenButton1.GetComponent<Image>().rectTransform.localScale = new Vector2(2.5f, 2.5f);
 
-            if(GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
+            if (GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
             {
-                if(!isCreated)
+                if (!isCreated)
                 {
                     if (l1Selected == true)
                     {
@@ -198,18 +198,47 @@ public class NewPllayerControlsTEST : MonoBehaviour
                 }
             }
 
-            
+
         }
         else
         {
             greenButton1.GetComponent<Image>().rectTransform.localScale = new Vector2(1, 1);
         }
 
+
         if (Input.GetKey(KeyCode.W))
         {
             greenButton2.GetComponent<Image>().rectTransform.localScale = new Vector2(2.5f, 2.5f);
 
-            print("W");
+            if (GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
+            {
+                if (!isCreated)
+                {
+
+                    if (l1Selected == true)
+                    {
+                        Instantiate(bigOBJ, lane1POS, Quaternion.identity);
+                    }
+
+                    if (l2Selected == true)
+                    {
+                        Instantiate(bigOBJ, lane2POS, Quaternion.identity);
+
+                    }
+
+                    if (l3Selected == true)
+                    {
+                        Instantiate(bigOBJ, lane3POS, Quaternion.identity);
+
+                    }
+
+                    isCreated = true;
+                }
+
+                //isCreated = true;
+            }
+
+            //print("W");
         }
         else
         {
@@ -217,11 +246,42 @@ public class NewPllayerControlsTEST : MonoBehaviour
         }
 
 
+
         if (Input.GetKey(KeyCode.E))
         {
             greenButton3.GetComponent<Image>().rectTransform.localScale = new Vector2(2.5f, 2.5f);
 
-            print("E");
+            if (GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
+            {
+                if (!isCreated)
+                {
+
+                    if (l1Selected == true)
+                    {
+                        Instantiate(rangeOBJ, lane1POS, Quaternion.identity);
+                    }
+
+                    if (l2Selected == true)
+                    {
+                        Instantiate(rangeOBJ, lane2POS, Quaternion.identity);
+
+                    }
+
+                    if (l3Selected == true)
+                    {
+                        Instantiate(rangeOBJ, lane3POS, Quaternion.identity);
+
+                    }
+
+                    isCreated = true;
+                }
+
+                // isCreated = true;
+
+
+            }
+
+            //print("E");
         }
         else
         {

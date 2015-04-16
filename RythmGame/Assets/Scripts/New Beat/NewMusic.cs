@@ -40,6 +40,7 @@ public class NewMusic : MonoBehaviour
 
         audioTimer += Time.deltaTime;
 
+        
 
 
         if (playAudio1 == true)
@@ -80,7 +81,7 @@ public class NewMusic : MonoBehaviour
 
             //playAudio4 = false;
 
-           // playAudio4 = false;
+            playAudio4 = false;
 
 
             //reset = true;
