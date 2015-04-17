@@ -24,7 +24,12 @@ public class NewMusic : MonoBehaviour
 
     private float audioTimer;
 
-    bool reset = true;
+
+    bool reset = false;
+
+    public float resetime;
+
+    float resetimer;
 
 
     // Use this for initialization
@@ -38,7 +43,7 @@ public class NewMusic : MonoBehaviour
     void Update()
     {
 
-        audioTimer += Time.deltaTime;
+       // audioTimer += Time.deltaTime;
 
         
 
@@ -74,17 +79,11 @@ public class NewMusic : MonoBehaviour
 
         if (playAudio4 == true)
         {
-
             aSource.clip = A2;
 
             aSource.Play();
 
-            //playAudio4 = false;
-
             playAudio4 = false;
-
-
-            //reset = true;
   
         }
 

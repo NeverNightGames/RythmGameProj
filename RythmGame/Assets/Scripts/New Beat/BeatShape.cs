@@ -10,6 +10,8 @@ public class BeatShape : MonoBehaviour {
 
     public bool hit3 = false;
 
+    public bool hit4 = false;
+
 
     private GameObject shape1OBJ;
 
@@ -48,14 +50,14 @@ public class BeatShape : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        if (GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
-        {
-            //shape1OBJ.transform.position = shape1StartPos;
+        //if (GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
+        //{
+        //    //shape1OBJ.transform.position = shape1StartPos;
 
-            //shape2OBJ.transform.position = shape2StartPos;
+        //    //shape2OBJ.transform.position = shape2StartPos;
 
-            //shape3OBJ.transform.position = shape3StartPos;
-        }
+        //    //shape3OBJ.transform.position = shape3StartPos;
+        //}
 	
 	}
 
@@ -98,6 +100,23 @@ public class BeatShape : MonoBehaviour {
         }
 
          // GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio3 = false;
+
+        if (this.gameObject.name == "Diamond 4")
+        {
+            if (col.gameObject.name == "BC 2")
+            {
+                print("HIT 3");
+
+                hit4 = true;
+
+                GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 = true;
+
+            }
+            //else
+            //{
+            //    hit4 = false;
+            //}
+        }
 
 
     }

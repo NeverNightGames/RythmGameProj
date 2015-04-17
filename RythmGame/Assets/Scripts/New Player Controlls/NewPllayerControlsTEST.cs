@@ -174,10 +174,14 @@ public class NewPllayerControlsTEST : MonoBehaviour
 
             greenButton1.GetComponent<Image>().rectTransform.localScale = new Vector2(2.5f, 2.5f);
 
-            if (GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
+            //if (GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
+
+            //if (GameObject.Find("Diamond").GetComponentInParent<BeatShape>().hit4 == true)
+
+            if (GameObject.Find("New Beat").GetComponentInParent<BeatMove>().canMake == true)
             {
-                if (!isCreated)
-                {
+                //if (!isCreated)
+               // {
                     if (l1Selected == true)
                     {
                         Instantiate(smallOBJ, lane1POS, Quaternion.identity);
@@ -194,8 +198,8 @@ public class NewPllayerControlsTEST : MonoBehaviour
                         Instantiate(smallOBJ, lane3POS, Quaternion.identity);
                     }
 
-                    isCreated = true;
-                }
+                   // isCreated = true;
+               //S }
             }
 
 
@@ -301,7 +305,7 @@ public class NewPllayerControlsTEST : MonoBehaviour
 
             blueButton1.GetComponent<Image>().rectTransform.localScale = new Vector2(2.5f, 2.5f);
 
-            print("A");
+            //s print("A");
 
         }
         else
@@ -315,7 +319,7 @@ public class NewPllayerControlsTEST : MonoBehaviour
 
             blueButton2.GetComponent<Image>().rectTransform.localScale = new Vector2(2.5f, 2.5f);
 
-            print("S");
+            // print("S");
 
         }
         else
@@ -329,7 +333,7 @@ public class NewPllayerControlsTEST : MonoBehaviour
 
             blueButton3.GetComponent<Image>().rectTransform.localScale = new Vector2(2.5f, 2.5f);
 
-            print("D");
+            // print("D");
 
         }
         else
