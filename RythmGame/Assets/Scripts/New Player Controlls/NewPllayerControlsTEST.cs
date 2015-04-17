@@ -180,8 +180,8 @@ public class NewPllayerControlsTEST : MonoBehaviour
 
             if (GameObject.Find("New Beat").GetComponentInParent<BeatMove>().canMake == true)
             {
-                //if (!isCreated)
-               // {
+                if (!isCreated)
+                {
                     if (l1Selected == true)
                     {
                         Instantiate(smallOBJ, lane1POS, Quaternion.identity);
@@ -198,8 +198,8 @@ public class NewPllayerControlsTEST : MonoBehaviour
                         Instantiate(smallOBJ, lane3POS, Quaternion.identity);
                     }
 
-                   // isCreated = true;
-               //S }
+                    isCreated = true;
+                }
             }
 
 
@@ -214,7 +214,8 @@ public class NewPllayerControlsTEST : MonoBehaviour
         {
             greenButton2.GetComponent<Image>().rectTransform.localScale = new Vector2(2.5f, 2.5f);
 
-            if (GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
+            //if (GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
+            if (GameObject.Find("New Beat").GetComponentInParent<BeatMove>().canMake == true)
             {
                 if (!isCreated)
                 {
@@ -255,7 +256,8 @@ public class NewPllayerControlsTEST : MonoBehaviour
         {
             greenButton3.GetComponent<Image>().rectTransform.localScale = new Vector2(2.5f, 2.5f);
 
-            if (GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
+            //if (GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
+            if (GameObject.Find("New Beat").GetComponentInParent<BeatMove>().canMake == true)
             {
                 if (!isCreated)
                 {
@@ -291,6 +293,14 @@ public class NewPllayerControlsTEST : MonoBehaviour
         {
             greenButton3.GetComponent<Image>().rectTransform.localScale = new Vector2(1, 1);
         }
+
+        // if (GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio4 == true)
+
+       // if (GameObject.Find("New Beat").GetComponentInParent<BeatMove>().canMake == true)
+        //{
+            isCreated = false;
+        //}
+
 
 
     }

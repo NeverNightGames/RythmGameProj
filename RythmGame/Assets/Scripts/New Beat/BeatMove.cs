@@ -50,6 +50,32 @@ public class BeatMove : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //beat1StartPos = beatShape1.transform.position;
+
+        //beat2StartPos = beatShape2.transform.position;
+
+        //beat3StartPos = beatShape3.transform.position;
+
+        //beat4StartPos = beatShape4.transform.position;
+
+        Vector2 spawnPos1 = new Vector2(Random.Range(0, Screen.width), Random.Range(0, Screen.height));
+
+        Vector2 spawnPos2 = new Vector2(Random.Range(0, Screen.width), Random.Range(0, Screen.height));
+
+        Vector2 spawnPos3 = new Vector2(Random.Range(0, Screen.width), Random.Range(0, Screen.height));
+
+        Vector2 spawnPos4 = new Vector2(Random.Range(0, Screen.width), Random.Range(0, Screen.height));
+
+
+        beatShape1.transform.position = spawnPos1;
+
+        beatShape2.transform.position = spawnPos2;
+
+        beatShape3.transform.position = spawnPos3;
+
+        beatShape4.transform.position = spawnPos4;
+
+
         beat1StartPos = beatShape1.transform.position;
 
         beat2StartPos = beatShape2.transform.position;
@@ -58,17 +84,15 @@ public class BeatMove : MonoBehaviour
 
         beat4StartPos = beatShape4.transform.position;
 
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Vector2 spawnPos = new Vector2(Random.Range(0, Screen.width), Random.Range(0, Screen.height));
 
-        //if (reset == false)
-        //{
-
-        //canMake = false;
+     
+        //beatShape1.transform.position = spawnPos;
 
         beatShape1.transform.position = Vector2.Lerp(beatShape1.transform.position, beatButton1.transform.position, beat1speed * Time.deltaTime);
 
@@ -77,7 +101,11 @@ public class BeatMove : MonoBehaviour
             //GameObject.Find("Diamond").GetComponentInParent<BeatShape>().hit1 = false;
             canMake = false;
 
+
+            //beatShape2.transform.position = spawnPos;
+
             beatShape2.transform.position = Vector2.Lerp(beatShape2.transform.position, beatButton2.transform.position, beat2speed * Time.deltaTime);
+
 
            // GameObject.Find("New Beat").GetComponentInParent<NewMusic>().playAudio1 = true;
 
@@ -88,7 +116,10 @@ public class BeatMove : MonoBehaviour
         {
            // GameObject.Find("Diamond 2").GetComponentInParent<BeatShape>().hit2 = false;
 
+            //beatShape3.transform.position = spawnPos;
+
             beatShape3.transform.position = Vector2.Lerp(beatShape3.transform.position, beatButton3.transform.position, beat3speed * Time.deltaTime);
+
 
              //GameObject.Find("Diamond").GetComponentInParent<BeatShape>().hit1 = false;
 
@@ -100,7 +131,11 @@ public class BeatMove : MonoBehaviour
         {
             //waittime += Time.deltaTime;
 
+
+            //beatShape4.transform.position = spawnPos;
+
             beatShape4.transform.position = Vector2.Lerp(beatShape4.transform.position, beatButton2.transform.position, beat4speed * Time.deltaTime);
+
 
             // GameObject.Find("Diamond 2").GetComponentInParent<BeatShape>().hit2 = false;
 
@@ -145,31 +180,6 @@ public class BeatMove : MonoBehaviour
            // reset = true;
 
         }
-
-
-        //if (reset == true)
-        //{
-        //    GameObject.Find("Diamond").GetComponentInParent<BeatShape>().hit1 = false;
-
-        //    GameObject.Find("Diamond").GetComponentInParent<BeatShape>().hit2 = false;
-
-        //    GameObject.Find("Diamond").GetComponentInParent<BeatShape>().hit3 = false;
-
-        //    GameObject.Find("Diamond").GetComponentInParent<BeatShape>().hit4 = false;
-
-
-
-        //beatShape1.transform.position = beat1StartPos;
-
-        //beatShape2.transform.position = beat2StartPos;
-
-        //beatShape3.transform.position = beat3StartPos;
-
-        //beatShape4.transform.position = beat4StartPos;
-
-        //    reset = false;
-        //}
-        // }
 
 
     }
