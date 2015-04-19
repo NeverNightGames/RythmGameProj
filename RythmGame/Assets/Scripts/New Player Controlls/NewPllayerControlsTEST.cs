@@ -89,13 +89,15 @@ public class NewPllayerControlsTEST : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ASD();
 
-
-        OneTwoThree();
+       // OneTwoThree();
 
         QWE();
 
-        ASD();
+        OneTwoThree();
+
+        //ASD();
 
     }
 
@@ -161,6 +163,7 @@ public class NewPllayerControlsTEST : MonoBehaviour
 
     void QWE()
     {
+
         Vector2 lane1POS = new Vector2(Lane1OBJ.transform.position.x, Lane1OBJ.transform.position.y - 10);
 
         Vector2 lane2POS = new Vector2(Lane2OBJ.transform.position.x, Lane2OBJ.transform.position.y - 10);
@@ -199,6 +202,9 @@ public class NewPllayerControlsTEST : MonoBehaviour
                     }
 
                     isCreated = true;
+
+                    GameObject.Find("New Beat").GetComponentInParent<BeatMove>().canMake = false;
+
                 }
             }
 
@@ -238,6 +244,8 @@ public class NewPllayerControlsTEST : MonoBehaviour
                     }
 
                     isCreated = true;
+
+                    GameObject.Find("New Beat").GetComponentInParent<BeatMove>().canMake = false;
                 }
 
                 //isCreated = true;
@@ -280,6 +288,8 @@ public class NewPllayerControlsTEST : MonoBehaviour
                     }
 
                     isCreated = true;
+
+                    GameObject.Find("New Beat").GetComponentInParent<BeatMove>().canMake = false;
                 }
 
                 // isCreated = true;

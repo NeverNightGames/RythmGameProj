@@ -156,13 +156,24 @@ public class BeatMove : MonoBehaviour
 
             canMake = true;
 
-            beatShape1.transform.position = beat1StartPos;
 
-            beatShape2.transform.position = beat2StartPos;
+            Vector2 spawnPos1 = new Vector2(Random.Range(0, Screen.width), Random.Range(0, Screen.height));
 
-            beatShape3.transform.position = beat3StartPos;
+            Vector2 spawnPos2 = new Vector2(Random.Range(0, Screen.width), Random.Range(0, Screen.height));
 
-            beatShape4.transform.position = beat4StartPos;
+            Vector2 spawnPos3 = new Vector2(Random.Range(0, Screen.width), Random.Range(0, Screen.height));
+
+            Vector2 spawnPos4 = new Vector2(Random.Range(0, Screen.width), Random.Range(0, Screen.height));
+
+
+            beatShape1.transform.position = spawnPos1;
+
+            beatShape2.transform.position = spawnPos2;
+
+            beatShape3.transform.position = spawnPos3;
+
+            beatShape4.transform.position = spawnPos4;
+
 
 
             GameObject.Find("Diamond").GetComponentInParent<BeatShape>().hit1 = false;
@@ -173,7 +184,6 @@ public class BeatMove : MonoBehaviour
 
             GameObject.Find("Diamond 4").GetComponentInParent<BeatShape>().hit4 = false;
 
-          
 
             print("HIT 4");
 
