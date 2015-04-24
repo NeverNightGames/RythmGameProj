@@ -21,7 +21,17 @@ public class EnemyDeathTrigTEST : MonoBehaviour
     {
         if (col.gameObject.tag == "Player Large")
         {
-            //GameObject.Find("Enemy").GetComponentInParent<EnemyHealthTEST>().enemyHealthSliderOBJ.value -= 25;
+            GameObject.Find("Enemy").GetComponentInParent<EnemyHealthTEST>().enemyHealthSliderOBJ.value -= 1;
+        }
+
+        if (col.gameObject.tag == "Player Small")
+        {
+            GameObject.Find("Enemy").GetComponentInParent<EnemyHealthTEST>().enemyHealthSliderOBJ.value -= 1;
+        }
+
+        if (col.gameObject.tag == "Player Range")
+        {
+            GameObject.Find("Enemy").GetComponentInParent<EnemyHealthTEST>().enemyHealthSliderOBJ.value -= 1;
         }
 
         Destroy(col.gameObject);

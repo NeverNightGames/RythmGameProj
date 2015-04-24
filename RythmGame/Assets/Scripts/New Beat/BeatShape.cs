@@ -67,7 +67,7 @@ public class BeatShape : MonoBehaviour {
         {
             if (col.gameObject.name == "BC 1")
             {
-                print("HIT 1");
+                //print("HIT 1");
 
                 hit1 = true;
 
@@ -79,7 +79,7 @@ public class BeatShape : MonoBehaviour {
         {
             if (col.gameObject.name == "BC 2")
             {
-                print("HIT 2");
+               // print("HIT 2");
 
                 hit2 = true;
 
@@ -91,7 +91,7 @@ public class BeatShape : MonoBehaviour {
         {
             if (col.gameObject.name == "BC 3")
             {
-                print("HIT 3");
+                //print("HIT 3");
 
                 hit3 = true;
 
@@ -105,7 +105,7 @@ public class BeatShape : MonoBehaviour {
         {
             if (col.gameObject.name == "BC 2")
             {
-                print("HIT 3");
+                //print("HIT 3");
 
                 hit4 = true;
 

@@ -18,7 +18,7 @@ public class PlayerHealthTEST : MonoBehaviour {
     {
         if (playerHealthSlideOBJ.value == 0)
         { 
-            //print("GAME OVER");
+            print("GAME OVER");
         }
 
 	

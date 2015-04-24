@@ -17,11 +17,23 @@ public class PlayerDeathTrigTEST : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-
         if (col.gameObject.tag == "Enemy Range")
         {
-            GameObject.Find("Player Control").GetComponentInParent<PlayerHealthTEST>().playerHealthSlideOBJ.value -= 25;
+            GameObject.Find("New Player Control").GetComponentInParent<PlayerHealthTEST>().playerHealthSlideOBJ.value -= 1;
         }
+
+        if (col.gameObject.tag == "Enemy Large")
+        {
+            GameObject.Find("New Player Control").GetComponentInParent<PlayerHealthTEST>().playerHealthSlideOBJ.value -= 1;
+        }
+
+        if (col.gameObject.tag == "Enemy Small")
+        {
+            GameObject.Find("New Player Control").GetComponentInParent<PlayerHealthTEST>().playerHealthSlideOBJ.value -= 1;
+        }
+
+
+        Destroy(col.gameObject);
 
     }
 }
